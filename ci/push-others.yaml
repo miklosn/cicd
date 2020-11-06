@@ -3,5 +3,5 @@ steps:
   name: 'wata727/tflint'
   entrypoint: 'tflint'
   args: 
-  - 'env/dev'
+  - '/workspace/ci/env/dev'
 
