@@ -1,0 +1,18 @@
+- id: 'tf init'
+  name: 'hashicorp/terraform:0.13.5'
+  entrypoint: 'sh'
+  args: 
+  - '-c'
+  - |
+      for dir in env/*/
+      do 
+        cd ${dir}   
+        env=${dir%*/}
+        env=${env#*/}
+        echo ""
+        echo "*************** TERRAFORM INIT ******************"
+        echo "******* At environment: ${env} ********"
+        echo "*************************************************"
+        terraform init || exit 1
+        cd ../../
+      done
