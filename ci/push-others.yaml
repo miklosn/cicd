@@ -1,4 +1,11 @@
 steps:
+- id: 'hello'
+  name: 'alpine'
+  entrypoint: 'sh'
+  args:
+  - '-c'
+  - |
+      ls -la /workspace
 - id: 'tflint'
   name: 'wata727/tflint'
   entrypoint: 'tflint'

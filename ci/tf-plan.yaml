@@ -20,7 +20,6 @@ steps:
 
 - id: 'tflint'
   name: 'wata727/tflint'
-  entrypoint: 'tflint'
   args: 
   - 'env/dev'
 
