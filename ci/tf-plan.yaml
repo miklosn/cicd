@@ -18,6 +18,12 @@ steps:
         cd ../../
       done
 
+- id: 'tflint'
+  name: 'wata727/tflint'
+  entrypoint: 'tflint'
+  args: 
+  - 'env/dev'
+
 - id: 'tf plan'
   name: 'hashicorp/terraform:0.13.5'
   entrypoint: 'sh'
