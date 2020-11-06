@@ -1,3 +1,4 @@
+steps:
 - id: 'tf init'
   name: 'hashicorp/terraform:0.13.5'
   entrypoint: 'sh'
